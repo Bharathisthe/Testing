@@ -108,7 +108,7 @@ test('Unsuccessful logout should return an error when no token is provided', asy
   const response = await apiContext.post('https://ball-machine.waltair.io/api/users/logout');
 
   // Expect an error: unauthorized or session invalid
-  expect(response.status()).toBeGreaterThanOrEqual(400); // e.g., 401 or 403
+  expect(response.status()).toBeGreaterThanOrEqual(400); 
   const body = await response.json();
 
   console.log('Logout Response:', body);
